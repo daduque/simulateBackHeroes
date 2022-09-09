@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (event) => {
     
     const heroesContainer = document.querySelector('#heroesContainer');
     const shuffle = (array) => {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${hero.superhero}</h2>
                 <img src="./public/assets/${hero.id}.jpg" alt="" width="200">
                 <p><strong>Publisher: </strong>${hero.publisher}</p>
+                <a class="btn btn-outline-primary w-75" href="./hero-detail.html?id=${hero.id}">Ver Detalles</a>
             </article>
             `
         })
